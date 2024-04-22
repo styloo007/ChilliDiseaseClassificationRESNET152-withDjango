@@ -1,0 +1,80 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color: bisque;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+    
+        .xd {
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    
+        h1 {
+            font-size: 2em;
+            color: #333;
+        }
+    
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .test-again {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .test-again .back-icon {
+            margin-right: 5px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <div class="xd">
+        <h1>Chilli Leaf Disease Detection</h1>
+        <br><br><br>
+        {% load static %}
+        <img src="{% static img_pth %}" alt="Uploaded Image" height="250" width="400">
+        <h1>Prediction: {{ label }}</h1>
+    </div>
+
+    <a href="http://127.0.0.1:8000/" class="test-again">
+        <span class="back-icon">↩</span> Test Again
+    </a>
+</body>
+</html>

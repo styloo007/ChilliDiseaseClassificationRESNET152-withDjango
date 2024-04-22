@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chilli Leaf Disease Detection</title>
+    
+    <style>
+    
+        body {
+          background-color:bisque;  
+
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+        }
+    
+        .content {
+          text-align: center;
+          background-color: white;
+          padding: 32px;
+          border-radius: 0px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+          color: #333;
+        }
+    
+        input[type="file"] {
+          padding: 10px;
+          border: none;
+          background-color: #4CAF50;
+          color: white;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+    
+        input[type="submit"] {
+          padding: 10px;
+          border: none;
+          background-color: #2196F3;
+          color: white;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+  <div class="content">
+    <form action="analyze" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <h1>Chilli Leaf Disease Detection</h1>
+      <label for="image_input">Upload Your Image Here</label>
+      <br><br>
+      <input accept="image/*" id="image_input" name="image_input" type="file">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
