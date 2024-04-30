@@ -7,5 +7,4 @@ To run the Django application, execute the following command:
 ```bash
 cd frontend
 
-```bash
 python manage.py runserver
